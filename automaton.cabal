@@ -19,7 +19,7 @@ executable automaton
   default-language:    Haskell2010
   build-depends: 
     base >= 4.7 && < 5,
-    containers >= 0.5.11.0 && < 0.6.0.0,
+    containers,
     lens,
     recursion-schemes,
     mtl,
@@ -27,4 +27,5 @@ executable automaton
     monad-loops
   default-extensions:
     NamedFieldPuns,
-    TemplateHaskell
+    TemplateHaskell,
+    ScopedTypeVariables

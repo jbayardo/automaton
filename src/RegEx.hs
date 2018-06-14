@@ -118,3 +118,6 @@ one = char '1'
 
 zero :: RegEx Char
 zero = char '0'
+
+any :: (Foldable f) => f (RegEx a) -> RegEx a
+any = Prelude.foldr Sum Empty

@@ -5,6 +5,7 @@ import NDFA
 import NDFAL
 import Syntax
 import RegEx
+import CFG
 
 -- Accepts strings that end with 'ing'
 ing = DFA.fromTable t "Start" "Failure" ["Success"]

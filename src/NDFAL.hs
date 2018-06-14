@@ -41,7 +41,7 @@ adjust ndfal trace = set accepted accepted' trace
     current = Trace.state trace
     -- The automaton is in accept state if at least one of the current states
     -- is in the set of final states.
-    accepted' = not $ current `Set.disjoint` (ndfal ^. final)
+    accepted' = not $ Set.null $ current `Set.intersection` (ndfal ^. final)
 
 start :: (Ord s, Ord a) => NDFAL s a -> Trace (Set s) (Lam a)
 start ndfal =
